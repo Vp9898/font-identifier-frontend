@@ -1,0 +1,19 @@
+.container { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; background-color: #f0f2f5; font-family: sans-serif; }
+.main { padding: 4rem 1rem; flex: 1; display: flex; flex-direction: column; align-items: center; width: 100%; max-width: 600px; }
+.title { margin: 0; line-height: 1.15; font-size: 3.5rem; font-weight: 700; text-align: center; color: #1c1e21; }
+.description { text-align: center; line-height: 1.5; font-size: 1.25rem; color: #606770; margin: 1rem 0; }
+.dropzone { width: 100%; min-height: 250px; border: 3px dashed #ccd0d5; border-radius: 12px; display: flex; justify-content: center; align-items: center; flex-direction: column; cursor: pointer; transition: border-color 0.2s, background-color 0.2s; margin-top: 2rem; background-color: #ffffff; padding: 20px; }
+.dropzoneActive { border-color: #1877f2; background-color: #f0f2f5; }
+.dropzone p { color: #606770; font-size: 1.1rem; }
+.previewImage { max-width: 100%; max-height: 220px; object-fit: contain; border-radius: 8px; }
+.identifyButton { margin-top: 1.5rem; padding: 1rem 2.5rem; font-size: 1.2rem; font-weight: 600; background-color: #1877f2; color: white; border: none; border-radius: 8px; cursor: pointer; transition: background-color 0.2s, transform 0.1s; }
+.identifyButton:disabled { background-color: #ccd0d5; cursor: not-allowed; }
+.identifyButton:hover:not(:disabled) { background-color: #166fe5; }
+.errorMessage { color: #fa383e; margin-top: 1rem; font-weight: 500; }
+.resultsContainer { margin-top: 3rem; width: 100%; animation: fadeIn 0.5s ease-in-out; }
+.resultsContainer h2 { text-align: center; color: #1c1e21; }
+.resultItem { list-style: none; padding: 1.5rem; border: 1px solid #dddfe2; border-radius: 12px; margin-bottom: 1rem; background: #ffffff; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); }
+.resultItem h3 { margin: 0 0 0.5rem 0; font-size: 1.5rem; }
+.resultItem p { margin: 0.25rem 0; color: #606770; }
+.resultItem a { display: inline-block; margin-top: 1rem; font-weight: 600; text-decoration: none; color: #1877f2; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
