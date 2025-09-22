@@ -48,8 +48,11 @@ const Home: NextPage = () => {
     try {
       const response = await axios.post<ApiResponse>(`${apiUrl}/api/v1/identify`, formData);
       setResults(response.data.results);
-    } catch (err: any) {
-      const msg = err.response?.data?.detail || 'Could not connect to the server.';
+    } catch (err) {
+      let msg = 'Could not connect to the server or an unknown error occurred.';
+      if (axios.isAxiosError(err) && err.response?.data?.detail) {
+        msg = err.response.data.detail;
+      }
       setError(`Error: ${msg}`);
     } finally {
       setIsLoading(false);
